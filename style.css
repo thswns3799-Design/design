@@ -1,0 +1,147 @@
+* {
+justify-content: space-between;
+z-index: 10;
+}
+
+
+.logo {
+font-weight: 600;
+letter-spacing: 3px;
+}
+
+
+/* HERO FIXED AREA */
+.hero-fixed {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.hero-card {
+width: 420px;
+height: 260px;
+background: #f8f8f8;
+box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+display: flex;
+align-items: flex-end;
+justify-content: flex-end;
+padding: 25px;
+}
+
+
+.hero-card span {
+font-size: 14px;
+letter-spacing: 1px;
+color: #aaa;
+}
+
+
+/* SCROLL CONTENT */
+.scroll-section {
+position: relative;
+background: #fff;
+margin-top: 100vh;
+padding: 160px 14vw;
+}
+
+
+.main-text {
+font-size: 42px;
+line-height: 1.6;
+margin-bottom: 60px;
+font-weight: 400;
+}
+
+
+.sub-text {
+font-size: 14px;
+line-height: 1.8;
+color: #777;
+}
+
+
+/* PORTFOLIO LIST */
+.portfolio {
+margin-top: 120px;
+}
+
+
+.portfolio-item {
+display: flex;
+margin-bottom: 30px;
+}
+
+
+.year {
+width: 120px;
+font-size: 14px;
+color: #999;
+}
+
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* 각 연도 라인 */
+.project-row {
+    position: relative;
+}
+
+/* 연도 중앙 고정 */
+.year {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #888;
+}
+.year-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.year-image {
+    margin-top: 8px;
+  width: 200px;      /* 원하는 크기로 조절 */
+    border-radius: 8px;
+}
+
+/* 프로젝트를 오른쪽으로 */
+.project-list {
+    margin-left: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* 년도 */
+.year {
+width: 80px;
+font-size: 14px;
+color: #888;
+}
+
+/* 프로젝트 리스트 */
+.project-list {
+display: flex;
+flex-direction: column;
+gap: 6px;
+}
+
+.footer {
+margin-top: 200px;
+padding-top: 40px;
+border-top: 1px solid #ddd;
+font-size: 12px;
+color: #aaa;
+}

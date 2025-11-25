@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LIVE ME – Scroll Overlay Effect</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+    font-family: 'Noto Serif KR', serif;
+    background: #f2f2f2;
+    color: #111;
+    }
+
+    /* HEADER */
+    header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    z-index: 1000;
+    background: transparent;
+    }
+
+    header .logo {
+    font-weight: 600;
+    letter-spacing: 4px;
+    }
+
+    header .right {
+    font-size: 14px;
+    }
+
+    /* HERO FIXED IMAGE AREA */
+    .hero {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1;
+    }
+
+    .hero-card {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+    /* SCROLL CONTENT (OVERLAY AREA) */
+    .content {
+    position: relative;
+    margin-top: 100vh;
+    background: #fff;
+    padding: 160px 80px;
+    z-index: 2;
+    }
+
+    .headline {
+    font-size: 48px;
+    line-height: 1.5;
+    margin-bottom: 60px;
+    }
+
+    .subcopy {
+    font-size: 14px;
+    color: #555;
+    }
+
+    .projects {
+    display: flex;
+  flex-direction: column;   /* 세로 1열 핵심 */
+  gap: 80px;                /* 연도 블록 간 간격 */
+}
+
+/* 한 줄(row) 구조 */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* 각 연도 라인 */
+.project-row {
+    position: relative;
+}
+
+/* 연도 중앙 고정 */
+.year {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #888;
+}
+.year-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.year-image {
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 600px; 
+    /* 원하는 크기로 조절 */
+    border-radius: 8px;
+}
+
+/* 프로젝트를 오른쪽으로 */
+.project-list {
+    margin-left: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+    .year {
+    font-weight: 600;
+    margin-bottom: 10px;
+    }
+
+    .project-list p {
+    font-size: 14px;
+    line-height: 1.8;
+    }
+
+    footer {
+    margin-top: 200px;
+    padding: 40px 0 20px;
+    border-top: 1px solid #ddd;
+    font-size: 12px;
+    color: #777;
+    }
+
+    @media(max-width: 768px) {
+    header { padding: 0 20px; }
+    .content { padding: 120px 20px; }
+    .headline { font-size: 32px; }
+    .hero-card { width: 90%; height: 220px; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+<div>Jun Designer</div>
+<div class="logo">Follow me</div>
+</header>
+
+<!-- 고정된 상단 이미지 영역 -->
+<section class="hero">
+    <div class="hero-card">
+    <img src="images/KakaoTalk_20251125_192434937.jpg" alt="hero image" class="hero-image">
+    <div class="hero-text">
+        Jun Seo's<br/>Design<br/>branding
+    </div>
+    </div>
+</section>
+
+<!-- 스크롤 시 덮어지는 콘텐츠 -->
+<section class="content">
+<div class="headline">
+    These are the works I created <br/>
+    while learning product design <br/>
+    at a bootcamp.
+</div>
+
+
+
+<div class="projects">
+
+<p>Selected works</p>
+</div>
+</div>
+
+
+<div class="projects">
+
+<div class="project-row">
+    <span class="year">2025</span>
+        <img src="images/과제 1.png" alt="2025 프로젝트 이미지" class="year-image">
+    <div class="project-list">
+    
+    
+    </div>
+</div>
+
+<div class="project-row">
+    <span class="year">2024</span>
+        <img src="images/과제 2.png" alt="2025 프로젝트 이미지" class="year-image">
+    <div class="project-list">
+    
+    
+    </div>
+</div>
+
+<div class="project-row">
+    <span class="year">2023</span>
+        <img src="images/과제 3.png" alt="2025 프로젝트 이미지" class="year-image">
+    <div class="project-list">
+    
+    
+    </div>
+</div>
+
+<div class="project-row">
+    <span class="year">2022</span>
+        <img src="images/과제 4.png" alt="2025 프로젝트 이미지" class="year-image">
+    <div class="project-list">
+    
+    
+    </div>
+</div>
+
+<div class="project-row">
+    <span class="year">2021</span>
+        <img src="images/과제 5.png" alt="2025 프로젝트 이미지" class="year-image">
+    <div class="project-list">
+    
+    
+    </div>
+</div>
+
+<div class="project-row">
+    <span class="year">2020</span>
+        <img src="images/과제 6.png" alt="2025 프로젝트 이미지" class="year-image">
+    <div class="project-list">
+    
+    
+    </div>
+</div>
+
+<div class="project-row">
+    <span class="year">2019</span>
+        <img src="images/과제 7.png" alt="2025 프로젝트 이미지" class="year-image">
+    <div class="project-list">
+    
+    
+    </div>
+</div>
+
+<div class="project-row">
+    <span class="year">2018</span>
+        <img src="images/과제 8.png" alt="2025 프로젝트 이미지" class="year-image">
+    <div class="project-list">
+    
+    
+    </div>
+</div>
+
+<div class="project-row">
+    <span class="year">2017</span>
+        <img src="images/과제 9.png" alt="2025 프로젝트 이미지" class="year-image">
+    <div class="project-list">
+    
+    
+    </div>
+</div>
+
+<div class="project-row">
+    <span class="year">2016</span>
+        <img src="images/과제 10.png" alt="2025 프로젝트 이미지" class="year-image">
+    <div class="project-list">
+    
+    
+    </div>
+</div>
+
+</div>
+
+<footer>
+    thswns3799@gmail.com<br/>
+    Contact. 010-4586-4584
+</footer>
+</section>
+
+</body>
+</html>
